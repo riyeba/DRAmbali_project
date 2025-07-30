@@ -7,7 +7,7 @@ function City() {
       <div className="py-10 sm:py-16 lg:py-20 px-4 -mx-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-left mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-1 sm:mb-2">Learn,</h2>
+            {/* <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-1 sm:mb-2">Learn,</h2> */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">Book Your First Lesson</h2>
           </div>
           
