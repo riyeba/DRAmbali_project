@@ -113,12 +113,12 @@ export default function SearchBar() {
       <div className="bg-white rounded-full p-1 sm:p-2 flex items-center shadow-lg">
         {/* Subject Input */}
         <div className="flex items-center flex-1 px-2 sm:px-4 py-2 sm:py-3 border-r border-gray-200 relative min-w-0" ref={subjectRef}>
-          <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 text-red-400 mr-2 sm:mr-3 flex-shrink-0" />
+          <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mr-2 sm:mr-3 flex-shrink-0" />
           <div className="flex-1 relative min-w-0">
             <input
               type="text"
               className="w-full text-sm sm:text-base lg:text-lg border-none outline-none bg-transparent placeholder-gray-400"
-              placeholder={searchValue ? '' : `Try "${subjects[currentSubjectIndex]}"`}
+              placeholder={searchValue ? '' : `"${subjects[currentSubjectIndex]}"`}
               value={searchValue}
               onChange={handleSubjectInputChange}
               onFocus={handleSubjectInputFocus}
