@@ -12,7 +12,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Superprof Global</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">LearnSphere Global</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Online courses</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">States</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
