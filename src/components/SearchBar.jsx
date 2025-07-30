@@ -182,7 +182,7 @@ export default function SearchBar() {
         {/* Search Button */}
         <button
           onClick={handleSearch}
-          className="bg-red-500 text-white rounded-full font-semibold hover:bg-red-600 transition-colors flex items-center justify-center px-3 py-2 sm:px-6 sm:py-3 w-10 h-10 sm:w-auto sm:h-auto ml-1 sm:ml-2 flex-shrink-0"
+          className="bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center px-3 py-2 sm:px-6 sm:py-3 w-10 h-10 sm:w-auto sm:h-auto ml-1 sm:ml-2 flex-shrink-0"
         >
           <Search className="h-4 w-4 sm:h-5 sm:w-5 sm:hidden" />
           <span className="hidden sm:inline">Search</span>

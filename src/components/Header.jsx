@@ -18,7 +18,7 @@ const Header = () => {
     <div className="bg-gradient-to-b from-pink-100 to-pink-50 overflow-x-hidden">
       {/* Header */}
       <header className="flex justify-between items-center p-4 bg-white shadow-sm relative">
-        <div className="text-xl sm:text-2xl font-bold text-red-500">LearnShere</div>
+        <div className="text-xl sm:text-2xl font-bold text-blue-500">LearnShere</div>
 
         {/* Desktop view */}
         <div className="hidden md:flex items-center gap-4">
@@ -28,7 +28,7 @@ const Header = () => {
           <button className="text-black px-4 py-2 rounded-full text-sm font-bold cursor-pointer hover:bg-gray-100 transition-colors">
             Log In
           </button>
-          <button className="bg-red-500 text-white px-4 py-2 rounded-full text-sm cursor-pointer hover:bg-red-600 transition-colors">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm cursor-pointer hover:bg-blue-600 transition-colors">
             Sign Up as Tutor
           </button>
         </div>
