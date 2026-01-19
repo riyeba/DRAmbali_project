@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Search, BookOpen, HelpCircle, X, Menu } from 'lucide-react'
+import { Link } from 'react-router'
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -15,22 +16,33 @@ const Header = () => {
   ], [])
 
   return (
-    <div className="bg-gradient-to-b from-pink-100 to-pink-50 overflow-x-hidden">
+    <div className="bg-gradient-to-b from-pink-100 to-pink-50 overflow-x-hidden sticky top-0 z-40">
       {/* Header */}
-      <header className="flex justify-between items-center p-4 bg-white shadow-sm relative">
-        <div className="text-2xl sm:text-2xl font-bold text-blue-500">LearnShere</div>
+      <header className="flex justify-between items-center p-4 bg-white shadow-sm  ">
+        <Link to="/"><div className="text-2xl sm:text-2xl font-bold text-blue-500 cursor-pointer">LearnSphere</div></Link>
 
         {/* Desktop view */}
         <div className="hidden md:flex items-center gap-4">
           <span>
             <HelpCircle className="w-4 h-4 text-gray-600 cursor-pointer" />
           </span>
+
           <button className="text-black px-4 py-2 rounded-full text-sm font-bold cursor-pointer hover:bg-gray-100 transition-colors">
-            Log In
+            About Us
           </button>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm cursor-pointer hover:bg-blue-600 transition-colors">
-            Sign Up as Tutor
-          </button>
+          <Link to="/SignUp">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm cursor-pointer hover:bg-blue-600 transition-colors">
+              Register as student
+            </button>
+          </Link>
+          {/* <button className="text-black px-4 py-2 rounded-full text-sm font-bold cursor-pointer hover:bg-gray-100 transition-colors">
+            Courses
+          </button> */}
+          <Link to="/first">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm cursor-pointer hover:bg-blue-600 transition-colors">
+              Register as a tutor
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
