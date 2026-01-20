@@ -161,16 +161,14 @@ const Header = () => {
               {/* Menu Links */}
               <div className="space-y-2">
                 {menuItems.map(({ icon: Icon, text, link }) => (
-                  <a
+                  <Link
                     key={text}
-                    href={link}
-                    className="flex items-center text-gray-700 cursor-pointer hover:text-blue-600 transition-colors p-4 rounded-xl hover:bg-white/70 group"
+                    to={link}
+                    className="flex items-center gap-4 text-gray-700 p-4 rounded-xl hover:bg-white transition-all"
                   >
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center mr-4 group-hover:from-blue-200 group-hover:to-purple-200 transition-all">
-                      <Icon className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <span className="font-semibold text-lg">{text}</span>
-                  </a>
+                    <Icon className="w-6 h-6" />
+                    <span className="text-lg font-medium">{text}</span>
+                  </Link>
                 ))}
                 <Link to="/about" className="flex items-center text-gray-700 cursor-pointer hover:text-blue-600 transition-colors p-4 rounded-xl hover:bg-white/70 group">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center mr-4 group-hover:from-blue-200 group-hover:to-purple-200 transition-all">
