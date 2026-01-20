@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import Link from 'next/link'
 import { Search, BookOpen, HelpCircle, X, Menu, LogIn, UserPlus } from 'lucide-react'
 
 const Header = () => {
@@ -20,7 +19,7 @@ const Header = () => {
       {/* Header */}
       <header className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4">
         {/* Logo */}
-        <Link href="/" className="group">
+        <Link to="/" className="group">
           <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer transform transition-transform group-hover:scale-105">
             LearnSphere
           </div>
@@ -29,16 +28,16 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-2 xl:gap-3">
           {/* Navigation Links */}
-          <Link href="/search" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+          <Link to="/search" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
             <Search className="w-4 h-4" />
             <span>Search Tutor</span>
           </Link>
 
-          <Link href="/about" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+          <Link to="/about" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
             About Us
           </Link>
 
-          <Link href="/help" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+          <Link to="/help" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
             <HelpCircle className="w-4 h-4" />
             <span>Help</span>
           </Link>
@@ -47,21 +46,21 @@ const Header = () => {
           <div className="h-8 w-px bg-gray-300 mx-2"></div>
 
           {/* Auth Buttons */}
-          <Link href="/login">
+          <Link to="/login">
             <button className="flex items-center gap-2 text-gray-700 px-5 py-2.5 rounded-full font-semibold border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 hover:bg-white transition-all cursor-pointer">
               <LogIn className="w-4 h-4" />
               <span>Log In</span>
             </button>
           </Link>
 
-          <Link href="/SignUp">
+          <Link to="/SignUp">
             <button className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-5 py-2.5 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all cursor-pointer">
               <UserPlus className="w-4 h-4" />
               <span>Student Sign Up</span>
             </button>
           </Link>
 
-          <Link href="/first">
+          <Link to="/first">
             <button className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2.5 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all cursor-pointer">
               <BookOpen className="w-4 h-4" />
               <span>Tutor Sign Up</span>
@@ -71,28 +70,28 @@ const Header = () => {
 
         {/* Tablet Navigation (md to lg) */}
         <nav className="hidden md:flex lg:hidden items-center gap-2">
-          <Link href="/search" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Search Tutor">
+          <Link to="/search" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Search Tutor">
             <Search className="w-5 h-5 text-gray-700" />
           </Link>
 
-          <Link href="/help" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Help">
+          <Link to="/help" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Help">
             <HelpCircle className="w-5 h-5 text-gray-700" />
           </Link>
 
-          <Link href="/login">
+          <Link to="/login">
             <button className="flex items-center gap-1 text-gray-700 px-3 py-2 rounded-full text-sm font-semibold border-2 border-gray-300 hover:border-blue-500 transition-all cursor-pointer">
               <LogIn className="w-4 h-4" />
               <span>Log In</span>
             </button>
           </Link>
 
-          <Link href="/SignUp">
+          <Link to="/SignUp">
             <button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-2 rounded-full text-sm font-semibold hover:from-blue-600 hover:to-blue-700 shadow-md transition-all cursor-pointer">
               Student
             </button>
           </Link>
 
-          <Link href="/first">
+          <Link to="/first">
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 rounded-full text-sm font-semibold hover:from-purple-600 hover:to-pink-600 shadow-md transition-all cursor-pointer">
               Tutor
             </button>
@@ -133,21 +132,21 @@ const Header = () => {
             <div className="px-6 pt-8 pb-6">
               {/* Auth Buttons */}
               <div className="space-y-3 mb-8">
-                <Link href="/login" className="block">
+                <Link to="/login">
                   <button className="w-full flex items-center justify-center gap-2 bg-white text-gray-700 text-lg py-4 rounded-xl font-semibold border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 transition-all shadow-sm cursor-pointer">
                     <LogIn className="w-5 h-5" />
                     <span>Log In</span>
                   </button>
                 </Link>
 
-                <Link href="/SignUp" className="block">
+                <Link to="/SignUp">
                   <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl text-lg font-semibold hover:from-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg transition-all cursor-pointer">
                     <UserPlus className="w-5 h-5" />
                     <span>Sign Up as Student</span>
                   </button>
                 </Link>
 
-                <Link href="/first" className="block">
+                <Link to="/first">
                   <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-xl text-lg font-semibold hover:from-purple-600 hover:to-pink-600 shadow-md hover:shadow-lg transition-all cursor-pointer">
                     <BookOpen className="w-5 h-5" />
                     <span>Sign Up as Tutor</span>
@@ -161,7 +160,7 @@ const Header = () => {
               {/* Menu Links */}
               <div className="space-y-2">
                 {menuItems.map(({ icon: Icon, text, link }) => (
-                  <Link
+                  <a
                     key={text}
                     href={link}
                     className="flex items-center text-gray-700 cursor-pointer hover:text-blue-600 transition-colors p-4 rounded-xl hover:bg-white/70 group"
@@ -170,13 +169,9 @@ const Header = () => {
                       <Icon className="w-5 h-5 text-blue-600" />
                     </div>
                     <span className="font-semibold text-lg">{text}</span>
-                  </Link>
+                  </a>
                 ))}
-
-                <Link
-                  href="/about"
-                  className="flex items-center text-gray-700 cursor-pointer hover:text-blue-600 transition-colors p-4 rounded-xl hover:bg-white/70 group"
-                >
+                <Link to="/about" className="flex items-center text-gray-700 cursor-pointer hover:text-blue-600 transition-colors p-4 rounded-xl hover:bg-white/70 group">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center mr-4 group-hover:from-blue-200 group-hover:to-purple-200 transition-all">
                     <HelpCircle className="w-5 h-5 text-blue-600" />
                   </div>
