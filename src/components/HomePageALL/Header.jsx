@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
+import Link from 'next/link'
 import { Search, BookOpen, HelpCircle, X, Menu, LogIn, UserPlus } from 'lucide-react'
 
 const Header = () => {
@@ -19,83 +20,83 @@ const Header = () => {
       {/* Header */}
       <header className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4">
         {/* Logo */}
-        <a href="/" className="group">
+        <Link href="/" className="group">
           <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer transform transition-transform group-hover:scale-105">
             LearnSphere
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-2 xl:gap-3">
           {/* Navigation Links */}
-          <a href="/search" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+          <Link href="/search" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
             <Search className="w-4 h-4" />
             <span>Search Tutor</span>
-          </a>
+          </Link>
 
-          <a href="/about" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+          <Link href="/about" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
             About Us
-          </a>
+          </Link>
 
-          <a href="/help" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+          <Link href="/help" className="flex items-center gap-2 text-gray-700 px-4 py-2 rounded-full font-medium hover:bg-white hover:shadow-sm transition-all cursor-pointer">
             <HelpCircle className="w-4 h-4" />
             <span>Help</span>
-          </a>
+          </Link>
 
           {/* Divider */}
           <div className="h-8 w-px bg-gray-300 mx-2"></div>
 
           {/* Auth Buttons */}
-          <a href="/login">
+          <Link href="/login">
             <button className="flex items-center gap-2 text-gray-700 px-5 py-2.5 rounded-full font-semibold border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 hover:bg-white transition-all cursor-pointer">
               <LogIn className="w-4 h-4" />
               <span>Log In</span>
             </button>
-          </a>
+          </Link>
 
-          <a href="/SignUp">
+          <Link href="/SignUp">
             <button className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-5 py-2.5 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all cursor-pointer">
               <UserPlus className="w-4 h-4" />
               <span>Student Sign Up</span>
             </button>
-          </a>
+          </Link>
 
-          <a href="/first">
+          <Link href="/first">
             <button className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2.5 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all cursor-pointer">
               <BookOpen className="w-4 h-4" />
               <span>Tutor Sign Up</span>
             </button>
-          </a>
+          </Link>
         </nav>
 
         {/* Tablet Navigation (md to lg) */}
         <nav className="hidden md:flex lg:hidden items-center gap-2">
-          <a href="/search" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Search Tutor">
+          <Link href="/search" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Search Tutor">
             <Search className="w-5 h-5 text-gray-700" />
-          </a>
+          </Link>
 
-          <a href="/help" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Help">
+          <Link href="/help" className="p-2 rounded-full hover:bg-white transition-all cursor-pointer" title="Help">
             <HelpCircle className="w-5 h-5 text-gray-700" />
-          </a>
+          </Link>
 
-          <a href="/login">
+          <Link href="/login">
             <button className="flex items-center gap-1 text-gray-700 px-3 py-2 rounded-full text-sm font-semibold border-2 border-gray-300 hover:border-blue-500 transition-all cursor-pointer">
               <LogIn className="w-4 h-4" />
               <span>Log In</span>
             </button>
-          </a>
+          </Link>
 
-          <a href="/SignUp">
+          <Link href="/SignUp">
             <button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-2 rounded-full text-sm font-semibold hover:from-blue-600 hover:to-blue-700 shadow-md transition-all cursor-pointer">
               Student
             </button>
-          </a>
+          </Link>
 
-          <a href="/first">
+          <Link href="/first">
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 rounded-full text-sm font-semibold hover:from-purple-600 hover:to-pink-600 shadow-md transition-all cursor-pointer">
               Tutor
             </button>
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -132,26 +133,26 @@ const Header = () => {
             <div className="px-6 pt-8 pb-6">
               {/* Auth Buttons */}
               <div className="space-y-3 mb-8">
-                <a href="/login" className="block">
+                <Link href="/login" className="block">
                   <button className="w-full flex items-center justify-center gap-2 bg-white text-gray-700 text-lg py-4 rounded-xl font-semibold border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 transition-all shadow-sm cursor-pointer">
                     <LogIn className="w-5 h-5" />
                     <span>Log In</span>
                   </button>
-                </a>
+                </Link>
 
-                <a href="/SignUp" className="block">
+                <Link href="/SignUp" className="block">
                   <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl text-lg font-semibold hover:from-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg transition-all cursor-pointer">
                     <UserPlus className="w-5 h-5" />
                     <span>Sign Up as Student</span>
                   </button>
-                </a>
+                </Link>
 
-                <a href="/first" className="block">
+                <Link href="/first" className="block">
                   <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-xl text-lg font-semibold hover:from-purple-600 hover:to-pink-600 shadow-md hover:shadow-lg transition-all cursor-pointer">
                     <BookOpen className="w-5 h-5" />
                     <span>Sign Up as Tutor</span>
                   </button>
-                </a>
+                </Link>
               </div>
 
               {/* Divider */}
@@ -160,7 +161,7 @@ const Header = () => {
               {/* Menu Links */}
               <div className="space-y-2">
                 {menuItems.map(({ icon: Icon, text, link }) => (
-                  <a
+                  <Link
                     key={text}
                     href={link}
                     className="flex items-center text-gray-700 cursor-pointer hover:text-blue-600 transition-colors p-4 rounded-xl hover:bg-white/70 group"
@@ -169,10 +170,10 @@ const Header = () => {
                       <Icon className="w-5 h-5 text-blue-600" />
                     </div>
                     <span className="font-semibold text-lg">{text}</span>
-                  </a>
+                  </Link>
                 ))}
 
-                <a
+                <Link
                   href="/about"
                   className="flex items-center text-gray-700 cursor-pointer hover:text-blue-600 transition-colors p-4 rounded-xl hover:bg-white/70 group"
                 >
@@ -180,7 +181,7 @@ const Header = () => {
                     <HelpCircle className="w-5 h-5 text-blue-600" />
                   </div>
                   <span className="font-semibold text-lg">About Us</span>
-                </a>
+                </Link>
               </div>
 
               {/* Bottom spacing */}
