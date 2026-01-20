@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Search, BookOpen, HelpCircle, X, Menu, LogIn, UserPlus } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
